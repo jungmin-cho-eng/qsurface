@@ -2,9 +2,9 @@ from abc import ABC, abstractmethod
 import time
 from ..elements import DataQubit, AncillaQubit, PseudoQubit, Edge, PseudoEdge
 from ...errors._template import Sim as Error
+from ... import errors as config_errors
 from typing import Any, List, Optional, Union, Tuple
 from collections import defaultdict
-import importlib
 
 
 class PerfectMeasurements(ABC):
@@ -159,9 +159,10 @@ class PerfectMeasurements(ABC):
             >>> import .errors.pauli as pauli
             >>> code.init_errors(pauli, error_rates={"p_phaseflip": 0.05})
         """
+        
         for error_module in error_modules:
             if type(error_module) == str:
-                error_module = importlib.import_module(".errors.{}".format(error_module), package="qsurface")
+                error_module = getattr(config_errors, "{}".format(error_module))
             self._init_error(error_module, error_rates)
 
     def _init_error(self, error_module, error_rates):

@@ -1,4 +1,4 @@
-from qsurface.codes.elements import AncillaQubit
+from ..elements import AncillaQubit
 from ..toric.sim import PerfectMeasurements as ToricPM, FaultyMeasurements as ToricFM
 
 
