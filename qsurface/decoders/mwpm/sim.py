@@ -240,8 +240,8 @@ class Planar(Toric):
             edges.append([i, len(qubits) + i, int(abs(weight))])
 
         # Add edges of weight 0 between all pseudo-qubits
-        for i0 in range(len(qubits), len(qubits)):
-            for i1 in range(i0 + 1, len(qubits) - 1):
+        for i0 in range(len(qubits), 2*len(qubits)):
+            for i1 in range(i0 + 1, 2*len(qubits)):
                 edges.append([i0, i1, 0])
         return edges
 

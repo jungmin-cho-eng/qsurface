@@ -125,7 +125,7 @@ def run_many(
                 iterations=iterations,
                 error_rates=error_rate,
                 benchmark=benchmarker,
-                mp_processes=mp_processes,
+                processes=mp_processes,
             )
 
             result.update(
