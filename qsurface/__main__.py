@@ -106,7 +106,7 @@ def cli(args):
         ["-pe", "--p_erasure", "store", "Erasure rate - float {0,1}", dict(type=float, default=0)],
         [
             "-pmx",
-            "--p_bitflip_plaq",
+            "--",
             "store",
             "Measurement bitflip rate - float {0,1}",
             dict(type=float, default=0),
@@ -197,7 +197,7 @@ def cli(args):
         ["-pe", "--p_erasure", "store", "Erasure rate - float {0,1}", dict(type=float, nargs="*")],
         [
             "-pmx",
-            "--p_bitflip_plaq",
+            "--",
             "store",
             "Measurement bitflip rate - float {0,1}",
             dict(type=float, nargs="*"),
