@@ -168,7 +168,7 @@ class ThresholdFit:
     """
 
     modified_ansatz: bool = False
-    p: fit_param = (0.00, 0.1, 0.11)
+    p: fit_param = (0.0, 0.1, 0.11)
     A: fit_param = (-np.inf, 0, np.inf)
     B: fit_param = (-np.inf, 0, np.inf)
     C: fit_param = (-np.inf, 0, np.inf)
